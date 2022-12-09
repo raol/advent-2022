@@ -5,7 +5,7 @@ class Day02(private val input: String) {
     fun part2() : Int = parse().map(::solveRoundStrategy).sum()
 
     private fun parse() =
-        input.split("\r\n").map(::parseLine)
+        input.split(Utils.linebreak()).map(::parseLine)
 
     private fun parseLine(line: String) : Pair<Theirs, Yours> {
         var parts = line.split(" ")

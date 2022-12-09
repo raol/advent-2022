@@ -7,6 +7,6 @@ class Day01(private val input: String) {
     fun part2() = parse().map { v -> v.sum() }.sortedDescending().take(3).sum()
 
     private fun parse() : List<IntArray> =
-        input.split("\r\n\r\n")
-            .map { s -> s.split("\r\n").map { ss -> ss.toInt() }.toIntArray() }
+        input.split("${Utils.linebreak()}${Utils.linebreak()}")
+            .map { s -> s.split(Utils.linebreak()).map { ss -> ss.toInt() }.toIntArray() }
 }
