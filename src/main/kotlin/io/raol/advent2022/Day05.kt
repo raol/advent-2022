@@ -6,7 +6,7 @@ import kotlin.io.path.createTempDirectory
 class Day05(private val input : String) {
 
     fun parse() : Pair<Field, List<Movement>> {
-        var parts = input.split("\n\n")
+        var parts = input.split("\r\n\r\n")
         return Pair(Field(parts[0]), Movement.movements(parts[1]))
     }
 
@@ -40,7 +40,7 @@ class Day05(private val input : String) {
 
         companion object {
             fun movements(value: String) =
-                value.split("\n").map(::Movement)
+                value.split("\r\n").map(::Movement)
         }
     }
 
@@ -71,7 +71,7 @@ class Day05(private val input : String) {
             field.map { s -> s.peek()}.joinToString("")
 
         private fun parse(value: String) :  List<Stack<Char>> {
-            val lines = value.split("\n")
+            val lines = value.split("\r\n")
             val digits = lines.last().split(" ").map { l -> l.trim() }.filter { l -> l.isNotEmpty() }
             val crates = (0 until  digits.count()).map<Int, Stack<Char>> { _ -> Stack() }.toList()
 

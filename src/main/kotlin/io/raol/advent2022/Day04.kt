@@ -9,7 +9,7 @@ class Day04(private val input : String) {
         parse().count { p -> p.first.intersect(p.second).isNotEmpty() }
 
     private fun parse() : List<Pair<Set<Int>, Set<Int>>> =
-        input.split("\n")
+        input.split("\r\n")
             .map(::lineToPair)
 
     private fun lineToPair(line : String) : Pair<Set<Int>, Set<Int>> {

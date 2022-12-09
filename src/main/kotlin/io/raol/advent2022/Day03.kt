@@ -16,13 +16,13 @@ class Day03(private val input: String) {
             .sum()
 
     private fun parse2() =
-        input.split("\n")
+        input.split("\r\n")
             .mapIndexed { i, s -> Pair(i / 3, s) }
             .groupBy({ p -> p.first}, {p -> p.second.toSet()})
             .map { group -> group.value }
 
     private fun parse1() =
-        input.split("\n")
+        input.split("\r\n")
             .map { line -> listOf(line.take(line.length / 2).toSet(), line.drop(line.length / 2).toSet()) }
 
 

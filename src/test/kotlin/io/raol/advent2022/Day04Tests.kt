@@ -16,7 +16,7 @@ class Day04Tests {
     fun solvePart1() {
         val data = Utils.readResourceFile("day4")
         val result = Day04(data).part1()
-        Assertions.assertThat(result).isEqualTo(2)
+        Assertions.assertThat(result).isEqualTo(424)
     }
 
     @Test
@@ -30,6 +30,6 @@ class Day04Tests {
     fun solvePart2() {
         val data = Utils.readResourceFile("day4")
         val result = Day04(data).part2()
-        Assertions.assertThat(result).isEqualTo(2)
+        Assertions.assertThat(result).isEqualTo(804)
     }
 }
